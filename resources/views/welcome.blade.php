@@ -1,7 +1,47 @@
 @extends('layouts.app')
 @section('content')
-    <div class="bg">
-    </div>
+    <!-- <div class="bg">
+    </div> -->
+
+    <!-- particles.js container -->
+<div id="particles-js">
+<div class="heading">
+            <h1>Software Developer</h1>
+            <h3>PHP / Laravel  / SQL Server / JavaScript / ExtJS /Jquery
+            </h3>
+        </div>
+
+</div>
+
+
+
+
+<!-- scripts -->
+<script src="js/particles.js"></script>
+<script src="js/appjs.js"></script>
+
+<!-- stats.js -->
+<!-- <script src="js/lib/stats.js"></script> -->
+<script>
+  var count_particles, stats, update;
+  stats = new Stats;
+  stats.setMode(0);
+  stats.domElement.style.position = 'absolute';
+  stats.domElement.style.left = '0px';
+  stats.domElement.style.top = '0px';
+  document.body.appendChild(stats.domElement);
+  count_particles = document.querySelector('.js-count-particles');
+  update = function() {
+    stats.begin();
+    stats.end();
+    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+    }
+    requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+</script>
+
     <div class="container">
         <div class="col-12 text-center pt-5">
         <div class="row">
